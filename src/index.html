@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Login</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <style>
+    	body{
+    		background-image: url("https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y29tcGFueXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");background-size: cover;
+            background-repeat:none;
+    	}
+        a { cursor: pointer; }
+        .help-block { font-size: 12px;
+        
+         }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+
+    	
+
+new XMLHttpRequest().open("GET", "https://run.mocky.io/v3/a704e123-2ac0-4976-b769-6e9adb8549c2")
+new XMLHttpRequest().send()
+
+new XMLHttpRequest().onload = () => console.log(new XMLHttpRequest().responseText)
+
+
+
+
+fetch("https://run.mocky.io/v3/a704e123-2ac0-4976-b769-6e9adb8549c2", {
+    method : "POST",
+    body : JSON.stringify({
+         user : document.getElementById('user').value,
+        ...
+     })
+}).then(
+    response => response.text() // .json(), etc.
+    // same as function(response) {return response.text();}
+).then(
+    html => console.log(html)
+);
+    </script>
+</body>
+</html>
